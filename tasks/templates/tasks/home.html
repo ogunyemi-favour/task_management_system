@@ -1,0 +1,25 @@
+{% extends 'tasks/layout.html'%}
+
+{% block body %}
+    <h1>TASKS</h1>
+    {% for task in tasks %}
+    <ul>
+        <li>Title: {{task.title}}</li>
+        <li>Description: {{task.description}}</li>
+        <li>Created_at: {{task.created_at}}</li>
+        <li>Due_Date: {{task.due_date}}</li>
+        <li>Staus: {{task.status}}</li>
+        
+    </ul>
+    <a href="{% url 'edit' task.id %}">[Edit Task]</a>
+    
+    <a href="{% url 'delete' task.id %}">[Delete Task</a>
+
+    {% empty %}
+    <h2>No Task</h2>
+    {% endfor %}
+    <br>
+     <a href="{% url 'create' %}">[Add Task]</a>
+
+
+{% endblock %}

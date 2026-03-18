@@ -1,0 +1,26 @@
+{% extends 'tasks/layout.html' %}
+
+{% block body %}
+    <h1>CREATE TASK</h1>
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Description</label><br>
+        <textarea name="description"></textarea><br><br>
+
+        <label>Due_date:</label><br>
+        <input type="datetime-local" name="due_date" required><br><br>
+
+        <label>Completed:</label><br>
+        <input type="checkbox" name="completed"><br><br>
+
+        <button type="submit">Add Task</button>
+
+    </form>
+    <br>
+    <a href="{% url 'home' %}">[View Task]</a>
+
+
+{% endblock %}
