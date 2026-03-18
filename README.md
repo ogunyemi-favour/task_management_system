@@ -18,10 +18,10 @@ A simple Django task management application.
 ## How to Run
 
 1. Clone the repository:
-git clone https://github.com/your-username/your-repo-name
+git clone https://github.com/ogunyemi-favour/task-management-system.git
 
 2. Navigate into the project:
-cd your-repo-name
+cd task_management_system
 
 3. Run migrations:
 python manage.py migrate
