@@ -1,0 +1,19 @@
+# Virtual Environment
+task/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Database
+db.sqlite3
+
+# Sensitive files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
